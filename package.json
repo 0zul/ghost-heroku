@@ -4,15 +4,15 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gndx/ghost-on-heroku.git"
+    "url": "git://github.com/imlarx/ghost-heroku.git"
   },
-  "bugs": "https://github.com/gndx/ghost-on-heroku/issues",
+  "bugs": "https://github.com/imlarx/ghost-heroku/issues",
   "private": true,
   "version": "2.0",
   "dependencies": {
     "casper": "github:TryGhost/Casper#main",
     "ghost": "^4.15.1",
-    "ghost-storage-adapter-s3": "^2.8.0",
+    "ghost-storage-adapter-b2": "^1.0.0",
     "ghost-storage-cloudinary": "^2.1.5",
     "mysql": "^2.18.1"
   },
