@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-var mysql      = require('mysql');
-var envValues  = require('./common/env-values');
+var mysql = require('mysql');
+var envValues = require('./common/env-values');
 
 console.error(`Awaiting MySQL database…`);
 pingDatabaseUntilConnected();
