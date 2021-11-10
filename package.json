@@ -21,6 +21,6 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bash bin/cloudinary.sh && bash bin/aws-s3.sh && bash bin/themes.sh"
+    "postinstall": "bash bin/cloudinary.sh && bash bin/backblaze-b2.sh && bash bin/themes.sh"
   }
 }
