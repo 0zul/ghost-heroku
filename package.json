@@ -8,10 +8,10 @@
   },
   "bugs": "https://github.com/imlarx/ghost-heroku/issues",
   "private": true,
-  "version": "4.15.1",
+  "version": "4.22.1",
   "dependencies": {
     "casper": "github:TryGhost/Casper#main",
-    "ghost": "^4.15.1",
+    "ghost": "^4.22.1",
     "ghost-storage-adapter-b2": "^1.0.0",
     "ghost-storage-cloudinary": "^2.1.5",
     "mysql": "^2.18.1",
