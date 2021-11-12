@@ -1,0 +1,61 @@
+{
+  "_from": "ghost-storage-adapter-b2@^1.0.0",
+  "_id": "ghost-storage-adapter-b2@1.0.0",
+  "_inBundle": false,
+  "_integrity": "sha1-jkCtqegA+wd7j6GIHUqc/I8yWsI=",
+  "_location": "/ghost-storage-adapter-b2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "ghost-storage-adapter-b2@^1.0.0",
+    "name": "ghost-storage-adapter-b2",
+    "escapedName": "ghost-storage-adapter-b2",
+    "rawSpec": "^1.0.0",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ghost-storage-adapter-b2/-/ghost-storage-adapter-b2-1.0.0.tgz",
+  "_shasum": "8e40ada9e800fb077b8fa1881d4a9cfc8f325ac2",
+  "_spec": "ghost-storage-adapter-b2@^1.0.0",
+  "_where": "/home/runner/ghost-heroku",
+  "author": {
+    "name": "Martien DT",
+    "email": "martiendt@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/martiendt/ghost-storage-adapter-b2/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "backblaze-b2": "0.9.9",
+    "bluebird": "^3.1.1",
+    "util": "^0.10.3"
+  },
+  "deprecated": false,
+  "description": "Ghost Storage Adapter - Backblaze(B2) Cloud Storage",
+  "homepage": "https://github.com/martiendt/ghost-storage-adapter-b2",
+  "keywords": [
+    "ghost",
+    "backblaze",
+    "b2",
+    "cloud",
+    "storage",
+    "adapter",
+    "plugin"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "ghost-storage-adapter-b2",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/martiendt/ghost-storage-adapter-b2.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

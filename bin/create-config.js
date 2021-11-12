@@ -1,11 +1,10 @@
 #!/usr/bin/env node
-// Ghost Configuration for Heroku
 
 var fs = require("fs");
 var path = require("path");
 var url = require("url");
 
-var envValues = require("./common/env-values");
+var envValues = require ("./common/env-values");
 var appRoot = path.join(__dirname, "..");
 
 function createConfig() {
@@ -20,8 +19,6 @@ function createConfig() {
         bucketId: process.env.B2_BUCKET_ID,
         bucketName: process.env.B2_BUCKET_NAME,
         key: process.env.B2_APPLICATION_KEY
-//         region: process.env.S3_BUCKET_REGION,
-//         assetHost: process.env.S3_ASSET_HOST_URL,
       },
     };
   } else if (!!process.env.CLOUDINARY_URL) {

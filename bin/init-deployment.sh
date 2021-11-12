@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+echo "Creating Config..."
+node bin/create-config
 
 echo "Initializing the deployment…"
 echo "pwd →"
@@ -6,6 +7,6 @@ pwd
 echo "config.production.json →"
 cat "config.production.json"
 
-bin/wait-for-db
+node bin/wait-for-db
 
-knex-migrator init --mgpath node_modules/ghost
+npm run migration
