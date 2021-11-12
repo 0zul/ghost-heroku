@@ -44,7 +44,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bash bin/cloudinary.sh && bash bin/backblaze-b2.sh && bash bin/themes.sh",
+    "postinstall": "bash bin/init-deployment.sh && bash bin/themes.sh",
     "migration": "knex-migrator init --mgpath node_modules/ghost"
   }
 }
