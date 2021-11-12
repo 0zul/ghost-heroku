@@ -1,12 +1,13 @@
 echo "Creating Config..."
-node bin/create-config.js 
+bin/create-config
 
-echo "Initializing the deployment…"
+echo "Initializing the deployment..."
 echo "pwd →"
 pwd
 echo "config.production.json →"
 cat "config.production.json"
 
-node bin/wait-for-db.js
+echo "Connecting and Building Database..."
+bin/wait-for-db
 
 npm run migration
