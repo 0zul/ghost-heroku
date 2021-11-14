@@ -1,0 +1,36 @@
+<div class="storySmall overflow-hidden flex flex-col relative mb-8 w-full shadow {{#is "post"}}godo-tracking{{/is}}"
+    {{#is "post"}}data-event-category="Article"
+    data-event-action="Related Posts"
+    data-event-label="{{url absolute="true"}}"
+    data-event-non-interaction="true"{{/is}}>
+
+    {{#if feature_image}}
+    <a href="{{url}}" class="storySmall-img-link">
+        <img class="storySmall-img object-cover w-full h-40 blur-up lazyload"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-srcset="{{img_url feature_image size="xs"}} 100w,{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+            data-sizes="auto"
+            width="350"
+            height="160"
+            alt="{{title}}"
+        />
+    </a>
+    {{/if}}
+
+    <div class="storySmall-inner p-4 flex flex-col justify-between flex-grow">
+        <div class="storySmall-body">
+            {{#if feature_image}}
+                <h2 class="text-22 lineClamp-2 text-title mb-2 leading-tight"><a href="{{url}}">{{title}}</a></h2>
+            {{else}}
+                <h2 class="text-22 text-title leading-tight"><a href="{{url}}">{{title}}</a></h2>
+                <p class="pt-4 mb-2">{{excerpt words="20"}}</p>
+            {{/if}}
+        </div>
+
+        {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+        {{> "components/datetime"}}
+    </div>
+
+    {{!-- Link --}}
+    <a href="{{url}}" class="absolute inset-0 z-3" aria-label="{{title}}"></a>
+</div>

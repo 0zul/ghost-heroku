@@ -1,0 +1,11 @@
+<aside class="sidebar col s12 l4 flex flex-col justify-start mt-12 lg:mt-0">
+    <div class="flex flex-col flex-1">
+
+        {{#get "posts" filter="featured:true" limit="3" as |sidebar_featured_post| }}
+            {{#if sidebar_featured_post}}
+                {{> "sidebar/sidebar-post-card" widgetTitle=(t "Featured Articles") widgetPosts=sidebar_featured_post }}
+            {{/if}}
+        {{/get}}
+
+    </div>
+</aside>

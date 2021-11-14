@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+    Design by:
+    ——————————
+        GODO FREDO
+        ✉ https://godofredo.ninja
+        ✎ @GodoFredoNinja
+        ✈ Lima - Perú
+-->
+<html lang="{{@site.locale}}">
+<head>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.querySelector('html').classList.add('dark');
+        } else {
+            document.querySelector('html').classList.remove('dark');
+        }
+    </script>
+
+    {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> --}}
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
+    {{!-- <style>{{> "main-styles"}}</style> --}}
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
+
+    {{!-- Block for Headers --}}
+    {{{block "header"}}}
+</head>
+<body class="{{block "special_body_class"}}">
+    <div class="simply-viewport flexColumnTop">
+        {{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
+        {{!-- Header Default --}}
+        {{!-- {{> "layout/header"}} --}}
+
+        {{!-- Header With Drop Down --}}
+         {{> "layout/header" hasDropDown=true}}
+
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
+
+        {{!-- Footer Default ./partials/layout/footer.hbs --}}
+        {{!-- {{>"layout/footer"}} --}}
+
+        {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
+         {{>"layout/footer-dark"}} 
+
+        {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
+        {{!-- {{>"layout/footer-not-menu"}} --}}
+    </div>
+
+    {{!-- Search box --}}
+    {{> "widget/search"}}
+
+    {{!-- Loandig Bar --}}
+    <div class="loadingBar top-0 fixed right-0 left-0 hidden"></div>
+
+    {{!-- Icons --}}
+    {{> "icons/icons-symbol-defs"}}
+
+    {{!-- Scripts URL --}}
+    <script>
+        var siteUrl = '{{@site.url}}';
+        var siteSearch = '{{asset "scripts/search.js"}}';
+        var prismJs = '{{asset "scripts/prismjs.js"}}';
+        var prismJsComponents = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/';
+    </script>
+
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
+    {{!-- Notifications ./partials/notifications.hbs --}}
+    {{!-- {{> "notifications"}} --}}
+
+    {{!-- script --}}
+    {{{block "scripts"}}}
+
+    {{!-- Main scripts --}}
+    <script src="{{asset "scripts/main.js"}}"></script>
+
+    {{!-- Paginastion --}}
+    {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}
+</body>
+</html>

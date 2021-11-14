@@ -10,7 +10,7 @@ var appRoot = path.join(__dirname, "..");
 function createConfig() {
   var fileStorage, storage;
 
-  if (!!process.env.B2_ACCOUNT_ID) {
+/*  if (!!process.env.B2_ACCOUNT_ID) {
     fileStorage = true;
     storage = {
       active: "b2",
@@ -21,7 +21,7 @@ function createConfig() {
         key: process.env.B2_APPLICATION_KEY
       },
     };
-  } else if (!!process.env.CLOUDINARY_URL) {
+} else*/ if (!!process.env.CLOUDINARY_URL) {
     fileStorage = true;
     storage = {
       active: "cloudinary",
