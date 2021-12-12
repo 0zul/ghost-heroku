@@ -1,0 +1,22 @@
+{
+  "name":"Anicast Blog",
+  "short_name":"Anicast Blog",
+  "description":"Thoughts, news and more about Anime and Manga.",
+  "lang":"en",
+  "start_url":"/",
+  "background_color":"#ffffff",
+  "display":"standalone",
+  "theme_color":"#e50b4f",
+  "icons":[
+     {
+      "src": "/assets/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
